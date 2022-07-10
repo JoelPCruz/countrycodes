@@ -1,0 +1,24 @@
+/* web fonts */
+
+/* base styles */
+*{
+    box-sizing: border-box;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+    background: url(../images/map-of-europe.jpg) no-repeat;
+    background-size: cover;
+}
+
+.countries-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px 12px;
+}
+
+/* media querries */
