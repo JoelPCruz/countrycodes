@@ -1,4 +1,4 @@
-let selectList = document.querySelector('countries');
+let selectList = document.querySelector('#countries');
 let countryCodes = [{"country":"Afghanistan","code":"93","iso":"AF"},
 {"country":"Albania","code":"355","iso":"AL"},
 {"country":"Algeria","code":"213","iso":"DZ"},
@@ -241,19 +241,17 @@ let countryCodes = [{"country":"Afghanistan","code":"93","iso":"AF"},
 {"country":"Zimbabwe","code":"263","iso":"ZW"}]
 
 // listens for click event
-function getCountryCode(name, index) { // function
-   
-    let countryName = selectList.value; // stores value of the selected country
-    if(countryName === countryCodes.charAt(countryName[index])) { // checks if the country name is included in the array
-        
-        let main = document.querySelector(main); // selects the main element
-        let info = countryCodes.includes(countryName) + countryName.code;
-
-        // main.innerHTML = info + info.code;
-        // .charAt(index)
-        // includes(name); 
-        console.log(info);
-
-        
+selectList.addEventListener("change", () => {
+    let selectedCountry = selectList.value;
+    let len = countryCodes.length
+    
+    for (let elem in countryCodes) {
+        console.log(selectedCountry);
     }
-}
+    // countryCodes.forEach(selectedCountry => console.log(countryCodes[selectedCountry]));
+    // for (let i = 0; i < len; i++) {
+    //     selectedCountry = countryCodes[i];
+    //     console.log(selectedCountry);
+    // }
+});
+
