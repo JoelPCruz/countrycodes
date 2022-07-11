@@ -246,7 +246,7 @@ selectList.addEventListener("change", () => {
     let len = countryCodes.length
     
     for (let elem in countryCodes) {
-        console.log(selectedCountry);
+        console.log(selectedCountry['code']);
     }
     // countryCodes.forEach(selectedCountry => console.log(countryCodes[selectedCountry]));
     // for (let i = 0; i < len; i++) {
