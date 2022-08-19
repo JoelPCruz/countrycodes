@@ -1,24 +1,31 @@
 /* web fonts */
 
 /* base styles */
-*{
-    box-sizing: border-box;
+
+.header {
+    background-color:  #004C54;
+    border: solid 3px #000000;
+    padding: 12px 12px;
 }
 
-.header-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 0 auto;
-    background: url(../images/map-of-europe.jpg) no-repeat;
-    background-size: cover;
+.title {
+    border-left:solid 6px #A5ACAF;
+ 
 }
 
-.countries-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 8px 12px;
+h1 {
+  color: #ACC0C6;
 }
 
+.rows:nth-child(1){
+  background-color: #004C54;
+}
+
+.rows:nth-child(2){
+  background-color: #A5ACAF;
+}
+
+.rows:nth-child(3){
+  background-color: #ACC0C6;
+}
 /* media querries */
