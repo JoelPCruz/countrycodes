@@ -1,6 +1,6 @@
 // COUNTRY CODES ARRAY
 
-const countryData = [{"country":"Afghanistan","code":"93","iso":"AF"},
+var countryData = [{"country":"Afghanistan","code":"93","iso":"AF"},
 {"country":"Albania","code":"355","iso":"AL"},
 {"country":"Algeria","code":"213","iso":"DZ"},
 {"country":"American Samoa","code":"1-684","iso":"AS"},
