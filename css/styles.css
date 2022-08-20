@@ -8,6 +8,10 @@
     padding: 12px 12px;
 }
 
+main {
+  background-color: #ACC0C6;
+}
+
 .title {
     border-left:solid 6px #A5ACAF;
  
@@ -18,14 +22,14 @@ h1 {
 }
 
 .rows:nth-child(1){
-  background-color: #004C54;
+  background-color: #046A38;
 }
 
 .rows:nth-child(2){
-  background-color: #A5ACAF;
+  background-color: #8A8D8F;;
 }
 
 .rows:nth-child(3){
-  background-color: #ACC0C6;
+  background-color: #FFCD00;;
 }
 /* media querries */
