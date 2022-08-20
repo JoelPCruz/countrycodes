@@ -7,37 +7,41 @@
 
 // VARIABLES
 
-let table = document.getElementById('myTable');
+let table = document.querySelector('.table-list');
 
 
 
 buildTable(countryData);
 
 function buildTable(data) {
+    table.innerHTML = '';
     for (let i = 0; i < data.length; i++) {
         let row = `
             <tr class="table">
-                <td class="rows">${data[i].country}</td>
-                <td class="rows">${data[i].code}</td>
-                <td class="rows">${data[i].iso}</td>
+                <td class="rows">${data[i].name}</td>
+                <td class="rows">${data[i].dial_code}</td>
+                <td class="rows">${data[i].isoCode}</td>
             </tr>
         `;
 
-        table.innerHTML += row;
+    table.innerHTML += row;
     }
 }
 
 const searchForm = () => {
     const searchHeader = document.querySelector('.header2')
     const searchLabel = document.createElement('label')
-    searchLabel.innerHTML =
+    searchLabel.innerHTML = '';
+    let html =
         `
         <label for="search" class="country-search">
         <span>Search by Country</span>
         <input id="search" placeholder="Search by Country...">
         <button type="button"><img src="images/icn-search.svg" alt="Search icon"></button>
         </label>
-        `
+        `;
+    searchLabel.innerHTML = html;
+    // console.log(searchLabel);
     searchHeader.appendChild(searchLabel)
   }
 
@@ -47,18 +51,34 @@ const searchForm = () => {
   const searchInput = document.getElementById('search')
   let newCountryList = []
   
+
   //    a. Event listener to filter out students based on the key characters provided to the search bar.
   searchInput.addEventListener('keyup', (e) => {
-    const filterInput = this.value.toLowerCase();
+    let filterInput = e.target.value.toLowerCase();
+    // console.log('filterInput', filterInput);
     
-    newCountryList = array.filter( function (val) {
-        if(val.country.includes(filterInput) || val.code.includes(filterInput) || val.iso.includes(filterInput)) {
-            let newObj = {country : val.country , code : val.code , iso : val.iso};
-            return newObj;
-        }
+
+   
+   
+
+    let item = countryData.filter( function (val) {
         
+        let valLower = val.name.toLowerCase();
+
+        if(valLower.includes(filterInput)) {
+            let results =  val.name;
+            return results;
+
+        }
+        console.log(val);
     })
+
+   
+
+    newCountryList = item;
+    console.log(newCountryList);
     buildTable(newCountryList);
+    
   });
 
 
