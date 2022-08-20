@@ -21,8 +21,14 @@ h1 {
   color: #ACC0C6;
 }
 
+
+th {
+  color: #A1561C;
+}
+
 .rows:nth-child(1){
   background-color: #046A38;
+  color: #ACC0C6;
 }
 
 .rows:nth-child(2){
@@ -30,6 +36,7 @@ h1 {
 }
 
 .rows:nth-child(3){
-  background-color: #FFCD00;;
+  background-color: #565A5C;
 }
+
 /* media querries */

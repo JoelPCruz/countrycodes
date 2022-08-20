@@ -20,27 +20,28 @@ function buildTable(data) {
             <tr class="table">
                 <td class="rows">${data[i].name}</td>
                 <td class="rows">${data[i].dial_code}</td>
-                <td class="rows">${data[i].isoCode}</td>
+                <td class="rows">${data[i].code}</td>
             </tr>
         `;
 
     table.innerHTML += row;
     }
 }
-
+const searchHeader = document.querySelector('.header2')
+const searchLabel = document.createElement('label')
 const searchForm = () => {
-    const searchHeader = document.querySelector('.header2')
-    const searchLabel = document.createElement('label')
+    
+    
     searchLabel.innerHTML = '';
     let html =
         `
         <label for="search" class="country-search">
         <span>Search by Country</span>
         <input id="search" placeholder="Search by Country...">
-        <button type="button"><img src="images/icn-search.svg" alt="Search icon"></button>
+        <button type="button"><img src="images/icons8-search.svg" alt="Search icon"></button>
         </label>
         `;
-    searchLabel.innerHTML = html;
+    searchLabel.innerHTML += html;
     // console.log(searchLabel);
     searchHeader.appendChild(searchLabel)
   }
@@ -60,15 +61,33 @@ const searchForm = () => {
 
    
    
-
+    const res = document.querySelector('.results');
     let item = countryData.filter( function (val) {
         
         let valLower = val.name.toLowerCase();
+        const notIncludesD = !valLower.includes(filterInput);
 
         if(valLower.includes(filterInput)) {
             let results =  val.name;
             return results;
+        
+        } if (notIncludesD) {
+        //     res.innerHTML = '';
+        //     // let html =
+        //     //      `
+        //     //     <h1>No Results</h1>
+        //     //     `;
+        //     // res.innerHTML = html;
+        //     // // console.log(searchLabel);
+        //     // res.appendChild(searchHeader)
+        //     let html = 
+        //     `
+        //     <h1>No Results</h1>
+        //     `;
 
+        //     res.innerHTML += html;
+        //     searchHeader.appendChild(res)
+        res.innerHTML = `<h1>No Results</h1>`;
         }
         console.log(val);
     })
