@@ -71,7 +71,12 @@ const searchForm = () => {
             let results =  val.name;
             return results;
         
-        } if (notIncludesD) {
+        }// if (newCountryList.length === 0) {
+            
+        //     res.innerHTML += '<li class="no-results">No results.</li>';
+        //   }
+        
+        // if (notIncludesD) {
         //     res.innerHTML = '';
         //     // let html =
         //     //      `
@@ -87,8 +92,8 @@ const searchForm = () => {
 
         //     res.innerHTML += html;
         //     searchHeader.appendChild(res)
-        res.innerHTML = `<h1>No Results</h1>`;
-        }
+        // res.innerHTML = `<h1>No Results</h1>`;
+        // }
         console.log(val);
     })
 
